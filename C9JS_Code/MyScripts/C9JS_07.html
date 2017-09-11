@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <script type="text/javascript">
+        function myAlertFunction() {
+            console.log("@myAlertFunction")
+            alert("Howdy!")
+            console.log("--!myAlertFunction")
+        }
+
+        function myParamAlertFunction(myValue) {
+            console.log("@myParamAlertFunction : myValue = " + myValue)
+            alert((myValue) ? ("Howdy, " + myValue) : "Oups, you forgot to fill the TextBox !")
+            console.log("--!myParamAlertFunction")
+        }
+
+        function add() {
+            console.log("@add")
+            console.log("parameters : ")
+            for (i = 0; i < arguments.length; i++) {
+                console.log(arguments[i])
+            }
+            var tmpValue = 0
+            for (i = 0; i < arguments.length; i++) {
+                tmpValue += parseInt(arguments[i])
+            }
+            console.log("--!add")
+            return tmpValue
+        }
+        console.log("Multiple Addition : ")
+        console.log("1 + 3 + 6 + 7 = " + add(1, 3, 6, 7))
+
+        function changeAddResult(result) {
+            console.log("@changeAddResult parameter : " + result)
+            document.getElementById('addResult').innerHTML = result
+            console.log("--!changeAddResult")
+        }
+
+        // Anonymous function assigned to variable (function literal)
+        var myAnonymousFunction = function() {
+            return arguments[0]
+        }(1, 2, 3);
+        // alert(myAnonymousFunction)
+    </script>
+</head>
+
+<body>
+    <h1>7. Javascript Functions</h1>
+    <h2>Simple Alert Function</h2>
+    <p>
+        <input type="button" value="myNewFunction" onclick="myAlertFunction()">
+    </p>
+    <h2>Alert Function with Parameter (from TextBox)</h2>
+    <p>
+        <input type="text" name="valueForHowdy" id="textBoxForHowdy">
+        <input type="button" value="myParameterAlertFunction" onclick="myParamAlertFunction(document.getElementById('textBoxForHowdy').value)">
+    </p>
+    <h2>Compute Function (Add nb1 to nb2 and change result display)</h2>
+    <p>
+        <input type="number" name="add1" id="add1"> &nbsp; + &nbsp;
+        <input type="number" name="add2" id="add2"> &nbsp; = &nbsp;
+        <span id="addResult">...</span> &nbsp;
+        <input type="button" value="Add" onclick="changeAddResult(add(document.getElementById('add1').value, document.getElementById('add2').value))">
+    </p>
+</body>
+
+</html>
