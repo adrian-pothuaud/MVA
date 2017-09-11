@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Nav</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="mainApp.js"></script>
+    <script src="eventModule.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="EventCtrl">
+    <nav>
+        <ul>
+            <li><a href="{{menu[0].href}}" ng-click="setIndex(0)" ng-class="(getIndex() === 0) ? 'active' : ''">{{menu[0].name}}</a></li>
+            <li><a href="{{menu[1].href}}" ng-click="setIndex(1)" ng-class="(getIndex() === 1) ? 'active' : ''">{{menu[1].name}}</a></li>
+            <li><a href="{{menu[2].href}}" ng-click="setIndex(2)" ng-class="(getIndex() === 2) ? 'active' : ''">{{menu[2].name}}</a></li>
+        </ul>
+    </nav>
+    <h1>{{title}}</h1>
+    <div class="container">
+
+    </div>
+</body>
+
+</html>

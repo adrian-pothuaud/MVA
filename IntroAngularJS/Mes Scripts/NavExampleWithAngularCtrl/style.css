@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    border: 1px dotted grey;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    width: auto;
+    border: 2px solid black;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    background: lightblue;
+    color: coral;
+}

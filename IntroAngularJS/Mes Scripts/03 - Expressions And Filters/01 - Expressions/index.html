@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Expressions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="mainApp.js"></script>
+    <script src="eventModule.js"></script>
+</head>
+
+<body ng-app="mainApp" ng-controller="EventCtrl">
+
+    <h1>Basic Expressions</h1>
+
+    <h2>Compute in Expressions</h2>
+    <code ng-non-bindable>&lt;p&gt;1 + 2 = &#123;&#123; 1 + 2 &#125;&#125;&lt;/p&gt;</code>
+    <p>1 + 2 = {{ 1 + 2 }}</p>
+
+    <h1>Filtering ng-repeat</h1>
+    <code ng-non-bindable>&lt;div ng-repeat="item in contacts | orderBy: 'age'"&gt;<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&#123;&#123;item.name + ", " + item.age + " ans. Num : " + item.phone&#125;&#125;&lt;/p&gt;<br/>
+            &lt;/div&gt;</code>
+    <div ng-repeat="item in contacts | orderBy: 'age'">
+        <p>{{item.name + ", " + item.age + " ans. Num : " + item.phone}}</p>
+    </div>
+
+</body>
+
+</html>

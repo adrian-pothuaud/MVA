@@ -1,0 +1,17 @@
+body {
+    margin: 50px;
+    padding: 25px;
+    border: 2px solid blue;
+}
+
+h1 {
+    margin-left: 0;
+}
+
+h2 {
+    margin-left: 16px;
+}
+
+h3 {
+    margin-left: 32px;
+}
