@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="C9JS_14.js"></script>
+    <title>JQuery</title>
+</head>
+
+<body>
+    <h1>14. JQuery Example</h1>
+    <section id="section1">
+        <h2>Changing Text in an element</h2>
+        <p>The text below will be changed if you try to click on the next button. Do not forget to fill text input with any value !</p>
+        <p class="toBeChanged">My Element</p>
+        <input type="text" name="newText" id="newText">
+        <button type="submit">Go Change Text</button>
+    </section>
+    <section id="section2">
+        <h2>Changing a whole element's HTML</h2>
+        <p>The div below will be changed if you try to click on the next button. Do not forget to fill text area input with any HTML tags !</p>
+        <div class="toBeChanged">
+            <p>My Element</p>
+        </div>
+        <textarea name="newHTML" cols="50" rows="10" id="newHTML"></textarea>
+        <button type="submit">Go Change HTML</button>
+    </section>
+    <section id="section3">
+        <h2>Prepend HTML</h2>
+        <p>The div below will be changed if you try to click on the next button. Do not forget to fill text area input with any HTML tags !</p>
+        <br/><br/>div begins below<br/><br/>
+        <div class="toBeChanged">
+            <ul>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+            <p>Lorem Ipsum ........ </p>
+        </div>
+        <br/><br/>div ends up<br/><br/>
+        <textarea name="newHTML" cols="50" rows="10" id="prependHTML"></textarea>
+        <button type="submit">Go prepend HTML</button>
+    </section>
+    <section id="section4">
+        <h2>Append HTML</h2>
+        <p>The div below will be changed if you try to click on the next button. Do not forget to fill text area input with any HTML tags !</p>
+        <br/>div begins below<br/><br/>
+        <div class="toBeChanged">
+            <ul>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ul>
+            <p>Lorem Ipsum ........ </p>
+        </div>
+        <br/>div ends up<br/><br/>
+        <textarea name="newHTML" cols="50" rows="10" id="appendHTML"></textarea>
+        <button type="submit">Go append HTML</button>
+    </section>
+    <section id="section5">
+        <h2>Change Class = Change CSS attributes</h2>
+        <p class="toBeChanged">... Text to change the color ...</p>
+        <input type="color" name="changeColor" id="newColor">
+        <button type="submit">Change Color</button>
+    </section>
+</body>
+
+</html>

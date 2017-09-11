@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loops</title>
+</head>
+
+<body>
+    <h1>9. Javascript Loops</h1>
+    <div id='first'>
+        <h2>While Loop</h2>
+        <h3>Code</h3>
+        <code>
+            var i = 0;<br>
+            var first = document.getElementById('first')<br>
+            console.log(first)<br>
+            while (i < 10) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var content = "&lt;strong&gt;" + i + "&lt;strong&gt;" + ((i < 9) ? " ... " : "")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;first.innerHTML += content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;i++<br>
+            }<br>
+        </code>
+        <h3>Results</h3>
+    </div>
+    <div id='second'>
+        <h2>Do...While Loop</h2>
+        <h3>Code</h3>
+        <code>
+            var j = 0;<br>
+            var second = document.getElementById('second')<br>
+            console.log(second)<br>
+            do {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var content = "&lt;strong&gt;" + j + "&lt;strong&gt;" + ((j < 9) ? " ... " : "")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;second.innerHTML += content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;j++<br>
+            } while (j < 10)<br>
+        </code>
+        <h3>Results</h3>
+    </div>
+    <div id='third'>
+        <h2>For Loop</h2>
+        <h3>Code</h3>
+        <code>
+            var third = document.getElementById('third')<br>
+            for (var index = 0; index < 10; index++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var content = "&lt;strong&gt;" + index + "&lt;strong&gt;" + ((index < 9) ? " ... " : "")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;third.innerHTML += content<br>
+            }<br>
+        </code>
+        <h3>Results</h3>
+    </div>
+    <div id='fourth'>
+        <h2>ForIn Loop</h2>
+        <h3>Code</h3>
+        <code>
+            var fourth = document.getElementById('fourth')<br>
+            for (index in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var content = "<strong>" + index + "</strong>" + ((index < 9) ? " ... " : "")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;fourth.innerHTML += content<br>
+            }<br>
+        </code>
+        <h3>Results</h3>
+    </div>
+    <div id='fifth'>
+        <h2>Foreach Loop</h2>
+        <h3>Code</h3>
+        <code>
+            var myTable = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+            var fifth = document.getElementById('fifth')<br>
+            myTable.forEach(function(element) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;var content = "<strong>" + element + "</strong>" + ((element < 9) ? " ... " : "")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;fifth.innerHTML += content<br>
+            })<br>
+        </code>
+        <h3>Results</h3>
+    </div>
+
+    <script type="text/javascript">
+        // While loop
+        var i = 0;
+        var first = document.getElementById('first')
+        while (i < 10) {
+            var content = "<strong>" + i + "</strong>" + ((i < 9) ? " ... " : "")
+            first.innerHTML += content
+            i++
+        }
+
+        // Do...While Loop
+        var j = 0;
+        var second = document.getElementById('second')
+        do {
+            var content = "<strong>" + j + "</strong>" + ((j < 9) ? " ... " : "")
+            second.innerHTML += content
+            j++
+        } while (j < 10)
+
+        // For Loop
+        var third = document.getElementById('third')
+        for (var index = 0; index < 10; index++) {
+            var content = "<strong>" + index + "</strong>" + ((index < 9) ? " ... " : "")
+            third.innerHTML += content
+        }
+
+        // For ... in Loop
+        var fourth = document.getElementById('fourth')
+        for (index in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+            var content = "<strong>" + index + "</strong>" + ((index < 9) ? " ... " : "")
+            fourth.innerHTML += content
+        }
+
+        // foreach
+        var myTable = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        var fifth = document.getElementById('fifth')
+        myTable.forEach(function(element) {
+            var content = "<strong>" + element + "</strong>" + ((element < 9) ? " ... " : "")
+            fifth.innerHTML += content
+        })
+    </script>
+</body>
+
+</html>

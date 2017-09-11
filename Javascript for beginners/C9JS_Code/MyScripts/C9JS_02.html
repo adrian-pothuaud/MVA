@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <!-- Javascript code below -->
+    <script type="text/javascript">
+        // Javascript Function
+        function substitute() {
+            // getting text box value
+            var myValue = document.getElementById('myTextBox').value;
+            // verifying input
+            if (myValue.length === 0) {
+                alert('Please enter a real value in the TextBox!');
+                return;
+            }
+            var myTitle = document.getElementById('title');
+            myTitle.innerHTML = myValue;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">Javascript Example</h1>
+    <input type="text" id="myTextBox" />
+    <input type="submit" value="Click Me" onclick="substitute()" />
+</body>
+
+</html>
