@@ -7,8 +7,14 @@
         .run([function() {
             console.log("[eventModule] -> Run hook")
         }])
-        .controller('EventCtrl', ['$scope', function($scope) {
-            
+        .controller('HomeCtrl', [function() {
+
+        }])
+        .controller('ContactCtrl', [function() {
+
+        }])
+        .controller('EventCtrl', [function() {
+
         }])
 
 })();
